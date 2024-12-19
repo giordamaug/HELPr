@@ -6,8 +6,8 @@ library(data.table)
 
 
 # Laod the DepMap CRIPR Cas9 effect score data
-#df_cripr <- read.csv('https://figshare.com/ndownloader/files/43346616')
-df_cripr <- read.csv('data/CRISPRGeneEffect.csv')
+df_cripr <- read.csv('https://figshare.com/ndownloader/files/43346616')
+#df_cripr <- read.csv('data/CRISPRGeneEffect.csv')
 rownames(df_cripr) <- df_cripr$X
 df_cripr$X <- NULL
 df_cripr <- as.data.frame(t(df_cripr))  # transpose... gen by ACH

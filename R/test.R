@@ -25,9 +25,7 @@ cell_lines <- select_cell_lines(df_nonan, df_map, tissue_list, nested=FALSE)
 labeled_df <- labelling(df_nonan, columns = cell_lines, labelnames = list("2" = "NE", "1" = "E"),
                         n_classes = 2, algorithm = "otsu", mode = "flat-multi", verbose = TRUE)
 # 3-class labelling by making mode over all cell lines in different contexts
-labeled_df3 <- labelling(df_nonan, columns = cell_lines, labelnames = list("3" = "sNE", "2" = "aE", "1" = "E"),
-                        +                         n_classes = 2, algorithm = "otsu", mode = "two-by-two", verbose = TRUE)
+labeled_df3 <- labelling(df_nonan, columns = cell_lines, labelnames = list("3" = "sNE", "2" = "aE", "1" = "E"), n_classes = 2, algorithm = "otsu", mode = "two-by-two", verbose = TRUE)
 # 2-class labelling by making the mode over the modes on multiple contexts
 cell_lines <- select_cell_lines(df_nonan, df_map, tissue_list, nested=TRUE)
-labeled_df_nested <- labelling(df_nonan, columns = cell_lines, labelnames = list("2" = "NE", "1" = "E"),
-                        n_classes = 2, algorithm = "otsu", mode = "flat-multi", verbose = TRUE)
+labeled_df_nested <- labelling(df_nonan, columns = cell_lines, labelnames = list("2" = "NE", "1" = "E"), n_classes = 2, algorithm = "otsu", mode = "flat-multi", verbose = TRUE)

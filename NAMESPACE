@@ -1,4 +1,3 @@
-exportPattern("^[[:alpha:]]+")
 export(labelling)
 export(filter_cripr_by_model)
 export(select_cell_lines)

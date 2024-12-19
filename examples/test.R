@@ -1,7 +1,6 @@
-source("../R/utility.R")
-source("../R/labelling.R")
-
-library(data.table)
+setwd("../")
+source("R/utility.R")
+source("R/labelling.R")
 
 
 # Laod the DepMap CRIPR Cas9 effect score data

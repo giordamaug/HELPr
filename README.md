@@ -5,6 +5,37 @@ The Help Framework for Essetial Gene detection and Prediction
 
 # Documentation
 The HELP software documentation is available at: https://giordamaug.github.io/myprojects/HELP/
+
+# Installation
+``` 
+#install.packages("devtools")
+devtools::install_github("giordamaug/HELPr")
+```
+# Usage
+
+### Load package
+```
+library(HELPr)
+
+df_cripr <- read.csv('data/CRISPRGeneEffect.csv')
+rownames(df_cripr) <- df_cripr$X
+df_cripr$X <- NULL
+df_cripr <- as.data.frame(t(df_cripr))  # transpose... gen by ACH
+
+# Laod the DepMap ModelID
+df_map <- read.csv('data/Model.csv')
+
+# select the tissue/disease
+line_group <- "OncotreeLineage"
+tissue_list <- list("Kidney", "Lung", "CNS/Brain")
+df1 <- filter_crispr_by_model(df_cripr, df_map, minlines=10, line_group=line_group)
+df_nonan <- delrows_with_nan_percentage(df1, perc=95.0)
+# 2-class labelling by making mode over all cell lines in different contexts
+cell_lines <- select_cell_lines(df_nonan, df_map, tissue_list, nested=FALSE)
+labeled_df <- labelling(df_nonan, columns = cell_lines, labelnames = list("2" = "NE", "1" = "E"),
+                        n_classes = 2, algorithm = "otsu", mode = "flat-multi", verbose = TRUE)
+```
+
 # Credits
 The HELP Framework was developed by the Computational Data Science group of High Performance Computing and Networking Institute of National Research Council of Italy (ICAR-CNR).
 

@@ -1,6 +1,5 @@
-setwd(".")
-source("R/utility.R")
-source("R/labelling.R")
+source("../R/utility.R")
+source("../R/labelling.R")
 
 library(data.table)
 

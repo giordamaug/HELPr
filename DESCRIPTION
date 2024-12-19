@@ -7,4 +7,3 @@ Maintainer: Maurizio Giordano <maurizio.giordano@cnr.it>
 Description: Essential genes are commonly defined as those required for the growth and survival of any organism or cell. HELP stands for “Human Gene Essentiality Labelling & Prediction”, a computational framework for labelling and predicting essential genes, and HELPr is a R implementation of the HELP framework.
 License: GNU GENERAL PUBLIC LICENSE version 3.0
 Encoding: UTF-8
-LazyData: true

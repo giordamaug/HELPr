@@ -1,5 +1,5 @@
 
-export(filter_cripr_by_model)
+export(filter_crispr_by_model)
 export(select_cell_lines)
 export(delrows_with_nan_percentage)
 export(labelling)

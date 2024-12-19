@@ -4,16 +4,7 @@ Title: The Help Framework for Essetial Gene detection and Prediction (R)
 Version: 0.1.0
 Author: Maurizio Giordano, Ilaria Granata
 Maintainer: Maurizio Giordano <maurizio.giordano@cnr.it>
-Description: Essential genes are commonly defined as those required for the 
-growth and survival of any organism or cell. 
-HELP stands for “Human Gene Essentiality Labelling & Prediction”, 
-a computational framework for labelling and predicting essential genes, 
-and HELPr is a R implementation of the HELP framework. 
-Its double scope allows achieving the identification of genes through the 
-dependency or not from experimental data. HELPr is a library of tools 
-useful for the identification of domain-specific context genes that can 
-highlight multiple levels of essentiality, and thus significance in the 
-functional role of genes.
+Description: Essential genes are commonly defined as those required for the growth and survival of any organism or cell. HELP stands for “Human Gene Essentiality Labelling & Prediction”, a computational framework for labelling and predicting essential genes, and HELPr is a R implementation of the HELP framework.
 License: GNU GENERAL PUBLIC LICENSE version 3.0
 Encoding: UTF-8
 LazyData: true

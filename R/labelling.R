@@ -214,7 +214,7 @@ modemax_nan_my <- function(a, reducefoo = max) {
 }
 
 labelling_core <- function(df, columns = character(0), n_classes = 2, show_progress = FALSE,
-                           verbose = FALSE, labelnames = list(0 <- "E", 1 <- "NE"), mode = "flat-multi",
+                           verbose = FALSE, labelnames = list(0 = "E", 1 = "NE"), mode = "flat-multi",
                            algorithm = "otsu", rowname = "gene", colname = "label",
                            reducefoo = max) {
 

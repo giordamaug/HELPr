@@ -213,6 +213,30 @@ modemax_nan_my <- function(a, reducefoo = max) {
   return(res)  # Return the result as a vector
 }
 
+#' Labelling Core Function
+#'
+#' This function performs labelling on a given data frame (`df`) based on the specified parameters.
+#'
+#' @param df A data frame containing the data to be labelled.
+#' @param columns A character vector specifying the column names to use for labelling. Default is an empty character vector (`character(0)`), which means all columns will be considered.
+#' @param n_classes An integer specifying the number of classes to label the data into. Default is `2`.
+#' @param show_progress Logical, if `TRUE`, progress of the labelling process will be displayed. Default is `FALSE`.
+#' @param verbose Logical, if `TRUE`, additional information about the labelling process will be printed. Default is `FALSE`.
+#' @param labelnames A named list specifying the labels for each class. Default is `list("0" = "E", "1" = "NE")`.
+#' @param mode A string specifying the labelling mode. Possible values are `"flat-multi"` or other modes. Default is `"flat-multi"`.
+#' @param algorithm A string specifying the algorithm to use for labelling. Default is `"otsu"`.
+#' @param rowname A string specifying the name of the row identifier. Default is `"gene"`.
+#' @param colname A string specifying the name of the column for labels. Default is `"label"`.
+#' @param reducefoo A function used to reduce data during labelling. Default is `max`.
+#'
+#' @return The function does not return anything currently, as it is an empty function definition.
+#'
+#' @examples
+#' # Example usage (to be customized based on implementation):
+#' df <- data.frame(a = rnorm(100), b = rnorm(100))
+#' labelling_core(df, columns = c("a", "b"), n_classes = 3)
+#'
+#' @export
 labelling_core <- function(df, columns = character(0), n_classes = 2, show_progress = FALSE,
                            verbose = FALSE, labelnames = list("0" = "E", "1" = "NE"), mode = "flat-multi",
                            algorithm = "otsu", rowname = "gene", colname = "label",

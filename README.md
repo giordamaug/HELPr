@@ -17,6 +17,7 @@ devtools::install_github("giordamaug/HELPr")
 ```
 library(HELPr)
 
+# Laod the DepMap CRISPR Cas9 effect scores
 df_cripr <- read.csv('data/CRISPRGeneEffect.csv')
 rownames(df_cripr) <- df_cripr$X
 df_cripr$X <- NULL
